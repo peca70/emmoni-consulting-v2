@@ -1,0 +1,248 @@
+@import "tailwindcss";
+
+/* ── Emmoni Design System Tokens ── */
+
+@theme {
+  --color-obsidian: #0A0A0A;
+  --color-aureum: #C8A456;
+  --color-gunmetal: #1A1A2E;
+  --color-ash: #E0E0E0;
+  --color-graphite: #6B6B6B;
+
+  --font-heading: "Space Grotesk", sans-serif;
+  --font-drama: "Instrument Serif", serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+/* ── Base Styles ── */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--color-obsidian);
+  color: var(--color-ash);
+  font-family: var(--font-heading);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Global Noise Overlay (SVG turbulence) ── */
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+}
+
+/* ── Section Dividers ── */
+
+.section-divider {
+  height: 1px;
+  background-color: rgba(200, 164, 86, 0.2);
+}
+
+/* ── Keyframe Animations ── */
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes pulse-green {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.85); }
+}
+
+@keyframes blink-cursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes gold-ping {
+  0% { transform: scale(1); opacity: 0.4; }
+  100% { transform: scale(2.5); opacity: 0; }
+}
+
+/* ── Hero Scan-Lines ── */
+
+.hero-scanlines::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(200, 164, 86, 0.03) 2px,
+    rgba(200, 164, 86, 0.03) 3px
+  );
+  z-index: 1;
+}
+
+/* ── Navbar Shimmer Button ── */
+
+.shimmer-btn {
+  background-image: linear-gradient(
+    110deg,
+    transparent 0%,
+    transparent 40%,
+    rgba(255, 255, 255, 0.15) 50%,
+    transparent 60%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+/* ── Typewriter Cursor ── */
+
+.typewriter-cursor {
+  display: inline-block;
+  width: 8px;
+  height: 1.1em;
+  background-color: #C8A456;
+  animation: blink-cursor 0.8s step-end infinite;
+  vertical-align: text-bottom;
+  margin-left: 2px;
+}
+
+/* ── Hover Slide Fill ── */
+
+.slide-fill {
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.slide-fill::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #C8A456;
+  transform: translateX(-101%);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: -1;
+}
+
+.slide-fill:hover::before {
+  transform: translateX(0);
+}
+
+.slide-fill:hover {
+  color: #0A0A0A;
+}
+
+/* ── Contact Modal ── */
+
+.modal-backdrop {
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+
+.modal-backdrop.modal-open {
+  opacity: 1;
+}
+
+.modal-panel {
+  opacity: 0;
+  transform: translateY(20px) scale(0.98);
+  transition: opacity 0.3s ease-out, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.modal-backdrop.modal-open .modal-panel {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.modal-input {
+  background-color: #0D0D0D;
+  border: 1px solid rgba(200, 164, 86, 0.1);
+  color: var(--color-ash);
+  transition: border-color 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+
+.modal-input::placeholder {
+  color: var(--color-graphite);
+}
+
+.modal-input:focus {
+  outline: none;
+  border-color: rgba(200, 164, 86, 0.5);
+  box-shadow: 0 0 0 3px rgba(200, 164, 86, 0.08);
+}
+
+/* ── Date & Time Picker ── */
+
+.cal-day {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background-color 0.15s ease-out, color 0.15s ease-out, border-color 0.15s ease-out;
+  border: 1px solid transparent;
+  color: var(--color-ash);
+  background-color: transparent;
+}
+
+.cal-day:hover:not(.cal-day--disabled):not(.cal-day--selected) {
+  background-color: rgba(200, 164, 86, 0.08);
+  border-color: rgba(200, 164, 86, 0.2);
+}
+
+.cal-day--selected {
+  background-color: #C8A456;
+  color: #0A0A0A;
+  font-weight: 600;
+}
+
+.cal-day--today:not(.cal-day--selected) {
+  border-color: rgba(200, 164, 86, 0.4);
+}
+
+.cal-day--disabled {
+  color: rgba(107, 107, 107, 0.4);
+  cursor: default;
+}
+
+.cal-day--outside {
+  color: rgba(107, 107, 107, 0.25);
+}
+
+.time-slot {
+  padding: 8px 0;
+  border-radius: 8px;
+  font-size: 13px;
+  font-family: var(--font-mono);
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.15s ease-out, color 0.15s ease-out, border-color 0.15s ease-out;
+  border: 1px solid rgba(200, 164, 86, 0.1);
+  color: var(--color-ash);
+  background-color: #0D0D0D;
+}
+
+.time-slot:hover:not(.time-slot--selected) {
+  border-color: rgba(200, 164, 86, 0.3);
+  background-color: rgba(200, 164, 86, 0.06);
+}
+
+.time-slot--selected {
+  background-color: #C8A456;
+  color: #0A0A0A;
+  font-weight: 600;
+  border-color: #C8A456;
+}
