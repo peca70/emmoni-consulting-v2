@@ -1578,7 +1578,7 @@ function App() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 mb-12">
             {/* Column 1 — Logo & tagline */}
             <div>
-              <img src={LOGO_FULL} alt="Emmoni Consulting" className="h-12 mb-5 object-contain" />
+              <img src={LOGO_FULL} alt="Emmoni Consulting" className="h-20 mb-5 object-contain" />
               <p className="text-base text-graphite leading-relaxed">
                 {t.footerTagline}
               </p>
