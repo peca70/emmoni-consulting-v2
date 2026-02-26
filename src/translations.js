@@ -11,37 +11,37 @@ const translations = {
 
     // ── Hero ──
     heroPrehead: 'Emmoni Consulting',
-    heroLine1: 'Ne optimizujemo.',
-    heroLine2ItalicPre: 'Mi se ',
-    heroLine2ItalicEm: 'opsedamo.',
-    heroSub: 'Sistemi za automatizaciju skrojeni po meri Vašeg poslovanja. Eliminišemo ručni rad, sečemo nepotrebne troškove i dajemo Vašem timu prostor da radi ono što stvarno donosi rezultate.',
-    heroCta1: 'Zakažite uvodni razgovor',
-    heroCta2: 'Pogledajte kako radi',
+    heroLine1: 'Ne nudimo polovična rešenja.',
+    heroLine2ItalicPre: 'Rešavamo probleme ',
+    heroLine2ItalicEm: 'u korenu.',
+    heroSub: 'Pravimo sisteme za automatizaciju poslovanja po meri koji eliminišu manuelni rad, smanjuju operativne troškove i omogućavaju vašem timu da se bavi onim što zaista donosi profit.',
+    heroCta1: 'Zakažite uvodni sastanak',
+    heroCta2: 'Pogledajte kako funkcioniše',
 
     // ── Services Section ──
     servicesPrehead: 'Šta gradimo',
-    servicesHeadline: 'Vaš ručni rad, ',
-    servicesHeadlineAccent: 'automatizovan.',
+    servicesHeadline: 'Kraj manuelnog ',
+    servicesHeadlineAccent: 'unosa podataka.',
 
     // Card 1
-    serviceCard1Title: 'Aplikacije i alati po meri',
-    serviceCard1Desc: 'Interni alati i aplikacije koje zamenjuju haos od tabela i nepovezanih sistema. Jedan funkcionalan softver umesto deset zakrpa — alat koji Vaš tim zaista želi da koristi.',
+    serviceCard1Title: 'Aplikacije i softverska rešenja po meri',
+    serviceCard1Desc: 'Razvijamo namenske aplikacije i softverska rešenja koja menjaju beskrajne Excel tabele i rasute alate jednim, centralizovanim sistemom. Pravimo alate koje će vaš tim zapravo voleti da koristi.',
 
     // Card 2
-    serviceCard2Title: 'AI agenti i digitalni zaposleni',
-    serviceCard2Desc: 'AI agenti koji vode prijem zahteva, kvalifikaciju leadova, zakazivanje, izveštavanje i korisničku podršku. Rade non-stop, ne odsustvuju, ne greše i ne traže povišicu.',
+    serviceCard2Title: 'AI agenti i digitalni asistenti',
+    serviceCard2Desc: 'Inteligentni sistemi koji preuzimaju prijem zahteva, kvalifikaciju potencijalnih klijenata, zakazivanje, izveštavanje i korisničku podršku. Rade 24/7, ne prave greške, ne idu na bolovanje i drastično smanjuju vaše operativne troškove.',
 
     // Card 3
-    serviceCard3Title: 'Automatizovani radni tokovi',
-    serviceCard3Desc: 'Kompletna automatizacija koja povezuje sve alate u Vašem poslovanju — podaci teku gde treba, zadaci se pokreću sami i ništa ne propada usput.',
+    serviceCard3Title: 'Automatizacija radnih procesa',
+    serviceCard3Desc: 'Pametni procesi koji povezuju sve alate koje već koristite. Podaci se automatski sinhronizuju, zadaci se sami dodeljuju, a nijedan upit ili obaveza više nikada neće biti zaboravljeni.',
 
     // ── Shuffler Items ──
     shufflerClientPortal: 'Klijentski portal',
-    shufflerClientPortalDesc: 'Projekti, fakture i dokumenta — sve na jednom mestu',
-    shufflerDashboard: 'Interni dashboard',
-    shufflerDashboardDesc: 'KPI-jevi u realnom vremenu za svaki sektor',
-    shufflerBooking: 'Sistem zakazivanja',
-    shufflerBookingDesc: 'Automatsko zakazivanje, bez mejlova i čekanja',
+    shufflerClientPortalDesc: 'Bezbedno mesto za projekte, fakture i dokumentaciju vaših klijenata',
+    shufflerDashboard: 'Interni Dashboard',
+    shufflerDashboardDesc: 'Ključni pokazatelji (KPI) u realnom vremenu – pregledni i jasni za svaki sektor',
+    shufflerBooking: 'Sistem za zakazivanje',
+    shufflerBookingDesc: 'Potpuna automatizacija termina, bez suvišnih mejlova i telefonskih poziva',
 
     // ── Telemetry Feed ──
     feedLine1: '▸ AI Agent: Faktura obrađena — 4.200 EUR uparena sa PO-3847',
@@ -62,27 +62,27 @@ const translations = {
     // ── Process Section ──
     processPrehead: 'Kako radimo',
     processHeadline: 'Tri faze. ',
-    processHeadlineAccent: 'Bez nagađanja.',
+    processHeadlineAccent: 'Bez nagađanja i praznog hoda.',
 
     // Process Card 1
-    processCard1Title: 'Mapiramo svako usko grlo u Vašem poslovanju.',
-    processCard1Desc: 'Ulazimo u Vaš tim na 1–2 nedelje. Pratimo procese izbliza. Beležimo svaku tačku gde se gubi vreme. Nalazimo onih 20% operacija koje troše 80% resursa — i pravimo konkretan plan da ih eliminišemo.',
+    processCard1Title: 'Detektujemo usko grlo u vašem poslovanju.',
+    processCard1Desc: 'Umesto površnih procena, ulazimo u srž vašeg tima na nedelju-dve dana. Pratimo kako se zadaci zaista obavljaju, beležimo gde se gubi najviše vremena i gde nastaju greške. Lociramo onih 20% manuelnih poslova koji vam jedu 80% resursa i pravimo precizan plan kako da ih eliminišemo.',
 
     // Process Card 2
-    processCard2Title: 'Projektujemo sistem pre nego što napišemo liniju koda.',
-    processCard2Desc: 'Bez gotovih šablona. Pravimo nacrt automatizacije skrojen za Vaše poslovanje — svaka integracija, svaki okidač, svaki rubni slučaj — da gradimo jednom, i to kako treba.',
+    processCard2Title: 'Projektujemo sistem pre pisanja ijedne linije koda.',
+    processCard2Desc: 'Zaboravite generička rešenja i gotove šablone. Pre nego što bilo šta napravimo, crtamo jasnu arhitekturu vašeg novog sistema. Definišemo procese i automatizacije za svaki specifičan scenario u vašoj firmi. Radimo temeljno na početku, kako kasnije ne bismo gubili vreme na prepravke.',
 
     // Process Card 3
-    processCard3Title: 'Puštamo u rad, pratimo i dorađujemo dok ne radi besprekorno.',
-    processCard3Desc: 'Ne predajemo projekat i nestajemo. Svaki sistem uključuje 30 dana optimizacije — pratimo performanse, rešavamo nepredviđene situacije i podešavamo dok automatizacija ne proradi kao sat.',
+    processCard3Title: 'Lansiranje i fino podešavanje u praksi.',
+    processCard3Desc: 'Ne isporučujemo softver da bismo nakon toga nestali. Svaki sistem koji implementiramo dolazi sa 30 dana aktivnog nadzora. Pratimo kako ga zaposleni koriste u realnim uslovima, rešavamo nepredviđene situacije u hodu i usavršavamo sistem sve dok automatizacija ne počne da radi besprekorno.',
 
     // ── CTA Section ──
-    ctaPrehead: 'Spremni?',
-    ctaHeadline: 'Dosta ručnog rada. ',
-    ctaHeadlineAccent: 'Automatizujte.',
-    ctaDesc: 'Zakažite besplatan razgovor od 30 minuta. Identifikujemo glavno usko grlo u Vašem poslovanju i pokazujemo kako bi automatizacija konkretno izgledala za Vas — bez prezentacija i praznih priča.',
-    ctaButton: 'Zakažite besplatan razgovor',
-    ctaDisclaimer: 'Bez ugovora. Bez obaveza. Samo konkretni odgovori.',
+    ctaPrehead: 'Spremni za promenu?',
+    ctaHeadline: 'Izađite iz operativnog haosa. ',
+    ctaHeadlineAccent: 'Počnite da automatizujete.',
+    ctaDesc: 'Zakažite besplatne konsultacije od 30 minuta. Lociraćemo glavno usko grlo u vašem radu i pokazati vam tačno kako automatizacija može da transformiše vaš svakodnevni posao.',
+    ctaButton: 'Zakažite besplatne konsultacije',
+    ctaDisclaimer: 'Bez ugovora. Bez obaveza. Samo konkretna rešenja.',
 
     // ── Footer ──
     footerTagline: 'Gradimo automatizaciju koja ručni rad čini prošlošću.',
@@ -106,7 +106,7 @@ const translations = {
     scannerExport: 'Izvoz',
 
     // ── Contact Modal ──
-    modalTitle: 'Zakažite besplatan razgovor',
+    modalTitle: 'Zakažite besplatne konsultacije',
     modalSubtitle: 'Popunite formu — javljamo se u roku od 24h.',
     formName: 'Ime i prezime',
     formEmail: 'Email adresa',
