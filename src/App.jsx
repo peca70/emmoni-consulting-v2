@@ -905,7 +905,7 @@ function ContactModal({ isOpen, onClose }) {
       {/* Spacer: centers panel vertically when modal fits, collapses when it doesn't */}
       <div className="shrink grow min-h-8 md:min-h-12" data-modal-spacer="true" />
       <div
-        className="modal-panel relative w-full max-w-xl rounded-2xl p-8 md:p-10 shrink-0"
+        className="modal-panel relative w-full max-w-xl rounded-2xl p-5 md:p-10 shrink-0"
         style={{
           backgroundColor: '#1A1A2E',
           border: '1px solid rgba(200,164,86,0.15)',
@@ -924,7 +924,7 @@ function ContactModal({ isOpen, onClose }) {
         {/* Header */}
         <div className="mb-8">
           <h3
-            className="text-2xl md:text-3xl font-bold text-ash mb-2"
+            className="text-xl md:text-3xl font-bold text-ash mb-2"
             style={{ letterSpacing: '-0.02em' }}
           >
             {t.modalTitle}
@@ -1240,7 +1240,7 @@ function App() {
         <div className="flex items-center gap-3">
           <LanguageToggle />
           <MagneticButton
-            className="shimmer-btn bg-aureum text-obsidian text-sm font-semibold px-5 py-2 rounded-full cursor-pointer"
+            className="shimmer-btn bg-aureum text-obsidian text-xs sm:text-sm font-semibold px-3 py-1.5 sm:px-5 sm:py-2 rounded-full cursor-pointer"
             onClick={() => setModalOpen(true)}
           >
             {t.navCta}
@@ -1284,14 +1284,14 @@ function App() {
           <h1 className="flex flex-col items-center gap-1">
             <span
               ref={heroLine1}
-              className="block font-heading font-bold text-4xl md:text-6xl text-ash"
+              className="block font-heading font-bold text-3xl md:text-6xl text-ash"
               style={{ letterSpacing: '-0.02em', clipPath: 'inset(100% 0 0 0)' }}
             >
               {t.heroLine1}
             </span>
             <span
               ref={heroLine2}
-              className="block font-drama italic text-5xl md:text-7xl text-aureum mt-1"
+              className="block font-drama italic text-3xl sm:text-5xl md:text-7xl text-aureum mt-1"
               style={{ clipPath: 'inset(100% 0 0 0)' }}
             >
               {t.heroLine2ItalicPre}<em>{t.heroLine2ItalicEm}</em>
@@ -1310,7 +1310,7 @@ function App() {
           <div className="flex flex-col sm:flex-row gap-4 mt-4">
             <div ref={heroBtn1}>
               <MagneticButton
-                className="bg-aureum text-obsidian font-semibold px-8 py-4 rounded-full text-sm md:text-base cursor-pointer"
+                className="bg-aureum text-obsidian font-semibold px-6 py-3 md:px-8 md:py-4 rounded-full text-sm cursor-pointer w-full sm:w-auto"
                 onClick={() => setModalOpen(true)}
               >
                 {t.heroCta1}
@@ -1318,7 +1318,7 @@ function App() {
             </div>
             <div ref={heroBtn2}>
               <MagneticButton
-                className="slide-fill border border-aureum text-aureum font-semibold px-8 py-4 rounded-full text-sm md:text-base cursor-pointer"
+                className="slide-fill border border-aureum text-aureum font-semibold px-6 py-3 md:px-8 md:py-4 rounded-full text-sm cursor-pointer w-full sm:w-auto"
                 onClick={() => document.getElementById('process').scrollIntoView({ behavior: 'smooth' })}
               >
                 {t.heroCta2}
@@ -1331,14 +1331,14 @@ function App() {
       <div className="section-divider" />
 
       {/* ═══════ FEATURES / SERVICES — "The Arsenal" ═══════ */}
-      <section id="services" className="py-24 md:py-32 px-4">
+      <section id="services" className="py-16 md:py-32 px-4">
         <div className="max-w-6xl mx-auto">
           {/* Section header */}
           <div className="text-center mb-16 section-animate">
             <p className="font-mono text-sm tracking-[0.2em] text-graphite uppercase mb-4">
               {t.servicesPrehead}
             </p>
-            <h2 className="text-3xl md:text-5xl font-bold" style={{ letterSpacing: '-0.02em' }}>
+            <h2 className="text-2xl md:text-5xl font-bold" style={{ letterSpacing: '-0.02em' }}>
               {t.servicesHeadline}
               <span className="font-drama italic text-aureum">{t.servicesHeadlineAccent}</span>
             </h2>
@@ -1430,14 +1430,14 @@ function App() {
       <div className="section-divider" />
 
       {/* ═══════ PROCESS — "The Protocol Stack" ═══════ */}
-      <section id="process" className="py-24 md:py-32 px-4">
+      <section id="process" className="py-16 md:py-32 px-4">
         <div className="max-w-5xl mx-auto">
           {/* Section header */}
           <div className="text-center mb-16 section-animate">
             <p className="font-mono text-sm tracking-[0.2em] text-graphite uppercase mb-4">
               {t.processPrehead}
             </p>
-            <h2 className="text-3xl md:text-5xl font-bold" style={{ letterSpacing: '-0.02em' }}>
+            <h2 className="text-2xl md:text-5xl font-bold" style={{ letterSpacing: '-0.02em' }}>
               {t.processHeadline}
               <span className="font-drama italic text-aureum">{t.processHeadlineAccent}</span>
             </h2>
@@ -1448,16 +1448,16 @@ function App() {
             {/* Card 1 — Diagnose */}
             <div
               ref={(el) => (processCards.current[0] = el)}
-              className="section-animate relative rounded-[1.25rem] p-8 md:p-12 overflow-hidden md:sticky md:top-24"
+              className="section-animate relative rounded-[1.25rem] p-5 sm:p-6 md:p-12 overflow-hidden md:sticky md:top-24"
               style={{ backgroundColor: '#1A1A2E' }}
             >
-              <span className="absolute top-4 right-6 font-mono text-[8rem] md:text-[10rem] leading-none font-bold text-aureum/[0.06] select-none pointer-events-none">
+              <span className="absolute top-4 right-4 md:right-6 font-mono text-[5rem] md:text-[10rem] leading-none font-bold text-aureum/[0.06] select-none pointer-events-none">
                 01
               </span>
               <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 <div>
                   <p className="font-mono text-sm text-aureum mb-3">01</p>
-                  <h3 className="text-2xl md:text-3xl font-bold mb-4" style={{ letterSpacing: '-0.02em' }}>
+                  <h3 className="text-xl md:text-3xl font-bold mb-4" style={{ letterSpacing: '-0.02em' }}>
                     {t.processCard1Title}
                   </h3>
                   <p className="text-graphite leading-relaxed">
@@ -1473,16 +1473,16 @@ function App() {
             {/* Card 2 — Architect */}
             <div
               ref={(el) => (processCards.current[1] = el)}
-              className="section-animate relative rounded-[1.25rem] p-8 md:p-12 overflow-hidden md:sticky md:top-24"
+              className="section-animate relative rounded-[1.25rem] p-5 sm:p-6 md:p-12 overflow-hidden md:sticky md:top-24"
               style={{ backgroundColor: '#1A1A2E' }}
             >
-              <span className="absolute top-4 right-6 font-mono text-[8rem] md:text-[10rem] leading-none font-bold text-aureum/[0.06] select-none pointer-events-none">
+              <span className="absolute top-4 right-4 md:right-6 font-mono text-[5rem] md:text-[10rem] leading-none font-bold text-aureum/[0.06] select-none pointer-events-none">
                 02
               </span>
               <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 <div>
                   <p className="font-mono text-sm text-aureum mb-3">02</p>
-                  <h3 className="text-2xl md:text-3xl font-bold mb-4" style={{ letterSpacing: '-0.02em' }}>
+                  <h3 className="text-xl md:text-3xl font-bold mb-4" style={{ letterSpacing: '-0.02em' }}>
                     {t.processCard2Title}
                   </h3>
                   <p className="text-graphite leading-relaxed">
@@ -1498,16 +1498,16 @@ function App() {
             {/* Card 3 — Deploy & Iterate */}
             <div
               ref={(el) => (processCards.current[2] = el)}
-              className="section-animate relative rounded-[1.25rem] p-8 md:p-12 overflow-hidden md:sticky md:top-24"
+              className="section-animate relative rounded-[1.25rem] p-5 sm:p-6 md:p-12 overflow-hidden md:sticky md:top-24"
               style={{ backgroundColor: '#1A1A2E' }}
             >
-              <span className="absolute top-4 right-6 font-mono text-[8rem] md:text-[10rem] leading-none font-bold text-aureum/[0.06] select-none pointer-events-none">
+              <span className="absolute top-4 right-4 md:right-6 font-mono text-[5rem] md:text-[10rem] leading-none font-bold text-aureum/[0.06] select-none pointer-events-none">
                 03
               </span>
               <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 <div>
                   <p className="font-mono text-sm text-aureum mb-3">03</p>
-                  <h3 className="text-2xl md:text-3xl font-bold mb-4" style={{ letterSpacing: '-0.02em' }}>
+                  <h3 className="text-xl md:text-3xl font-bold mb-4" style={{ letterSpacing: '-0.02em' }}>
                     {t.processCard3Title}
                   </h3>
                   <p className="text-graphite leading-relaxed">
@@ -1528,7 +1528,7 @@ function App() {
       <div className="section-divider" />
 
       {/* ═══════ CTA — "The Ignition" ═══════ */}
-      <section id="contact" className="relative py-32 md:py-40 px-4 overflow-hidden">
+      <section id="contact" className="relative py-20 md:py-40 px-4 overflow-hidden">
         {/* Radial gold glow from top (inverted hero) */}
         <div
           className="absolute inset-0 z-0"
@@ -1541,7 +1541,7 @@ function App() {
           <p className="font-mono text-sm tracking-[0.2em] text-aureum uppercase">
             {t.ctaPrehead}
           </p>
-          <h2 className="text-3xl md:text-5xl font-bold" style={{ letterSpacing: '-0.02em' }}>
+          <h2 className="text-2xl md:text-5xl font-bold" style={{ letterSpacing: '-0.02em' }}>
             {t.ctaHeadline}
             <span className="font-drama italic text-aureum">{t.ctaHeadlineAccent}</span>
           </h2>
@@ -1557,7 +1557,7 @@ function App() {
               key={undefined}
             />
             <MagneticButton
-              className="relative bg-aureum text-obsidian font-semibold px-10 py-5 text-base md:text-lg rounded-full cursor-pointer"
+              className="relative bg-aureum text-obsidian font-semibold px-8 py-4 md:px-10 md:py-5 text-sm md:text-lg rounded-full cursor-pointer"
               onClick={() => setModalOpen(true)}
             >
               {t.ctaButton}
@@ -1575,7 +1575,7 @@ function App() {
       {/* ═══════ FOOTER — "Ground Control" ═══════ */}
       <footer className="bg-obsidian rounded-t-[2rem] pt-16 pb-8 px-4 md:px-8">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 mb-12">
             {/* Column 1 — Logo & tagline */}
             <div>
               <img src={LOGO_FULL} alt="Emmoni Consulting" className="h-8 mb-4 object-contain" />
