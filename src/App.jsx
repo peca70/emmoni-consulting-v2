@@ -1578,14 +1578,14 @@ function App() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 mb-12">
             {/* Column 1 — Logo & tagline */}
             <div>
-              <img src={LOGO_FULL} alt="Emmoni Consulting" className="h-8 mb-4 object-contain" />
-              <p className="text-sm text-graphite">
+              <img src={LOGO_FULL} alt="Emmoni Consulting" className="h-12 mb-5 object-contain" />
+              <p className="text-base text-graphite leading-relaxed">
                 {t.footerTagline}
               </p>
             </div>
 
             {/* Column 2 — Navigation */}
-            <div>
+            <div className="text-center">
               <p className="font-mono text-xs tracking-wider text-graphite uppercase mb-4">{t.footerNavTitle}</p>
               <ul className="space-y-2">
                 {footerLinks.map((link) => (
@@ -1595,7 +1595,7 @@ function App() {
                       className="text-sm text-ash hover:text-aureum transition-colors duration-300 relative group"
                     >
                       {link.label}
-                      <span className="absolute left-0 -bottom-0.5 h-px w-0 bg-aureum transition-all duration-300 group-hover:w-full" />
+                      <span className="absolute left-1/2 -translate-x-1/2 -bottom-0.5 h-px w-0 bg-aureum transition-all duration-300 group-hover:w-full" />
                     </a>
                   </li>
                 ))}
@@ -1603,15 +1603,15 @@ function App() {
             </div>
 
             {/* Column 3 — Contact & Status */}
-            <div>
+            <div className="text-center">
               <p className="font-mono text-xs tracking-wider text-graphite uppercase mb-4">{t.footerContactTitle}</p>
               <div className="space-y-2 mb-6">
-                <a href="mailto:hello@emmoni.com" className="flex items-center gap-2 text-sm text-ash hover:text-aureum transition-colors duration-300">
+                <a href="mailto:hello@emmoni.com" className="inline-flex items-center gap-2 text-sm text-ash hover:text-aureum transition-colors duration-300">
                   <Mail size={14} className="text-graphite" />
                   hello@emmoni.com
                 </a>
               </div>
-              <div className="flex items-center gap-2">
+              <div className="inline-flex items-center gap-2">
                 <span
                   className="w-2 h-2 rounded-full bg-green-500"
                   style={{ animation: 'pulse-green 2s ease-in-out infinite' }}
